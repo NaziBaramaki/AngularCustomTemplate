@@ -1,0 +1,24 @@
+
+<div (click)="onCloseClick()" class="ui dimmer visible active">
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+        <i class="close icon visible" (click)="onCloseClick()"></i>
+        <div class="header">
+                       
+            <ng-content select="header" ></ng-content>
+            
+        </div>
+        <div class="content">
+
+           <ng-content select="content" ></ng-content>
+           
+        </div>
+        <div class="actions" *ngIf="isExistFooter">
+            <div *ngIf="defaultButton"  class="ui positive right labeled icon button"(click)="onCloseClick()">Agree</div>
+            <div class="ui black deny button"(click)="onCloseClick()">
+                
+                <ng-content select="footer" ></ng-content>
+                
+            </div>
+        </div>
+    </div>
+</div>

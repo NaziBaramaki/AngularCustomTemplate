@@ -1,0 +1,6 @@
+
+:host:not(:first-of-type){
+
+    margin-top: 40px;
+    display: block;
+}

@@ -1,0 +1,13 @@
+
+
+<app-devider [title]="'Modal Component'"></app-devider>
+<button class="ui green button" (click)="onChangeModal()" >show Modal</button>
+<app-modal [defaultButton]="true" (onClose)="onChangeModal()" *ngIf="showModal">
+    <header> Modal Header</header>
+    <content>  This is content</content>
+    <footer> Test </footer>
+</app-modal>
+
+<app-devider [title]="'Accordion Component'"></app-devider>
+<app-accordion [items]="items"></app-accordion>
+
